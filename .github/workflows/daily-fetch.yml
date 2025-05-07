@@ -2,7 +2,7 @@ name: Daily Fetch and Translate
 
 on:
   schedule:
-    - cron: '0 21 * * *'  # JST 6:00AM（UTC+9 = 21:00 前日）
+    - cron: '14 14 * * *'  # JST 6:00AM（UTC+9 = 21:00 前日）
   workflow_dispatch:
 
 jobs:

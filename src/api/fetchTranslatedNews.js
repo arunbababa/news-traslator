@@ -1,7 +1,9 @@
 export async function fetchTranslatedNews() {
     const url = import.meta.env.VITE_SUPABASE_STRAGE_URL_TRANSLATED;
 
-    const res = await fetch(url);
+    const res = await fetch(`${url}?t=${Date.now()}`, {
+        cache: "no-store"
+    });
     const text = await res.text();
 
     try {
